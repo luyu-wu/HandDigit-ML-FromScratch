@@ -6,10 +6,10 @@ from numba import njit
 from tqdm import tqdm
 
 # Runtime Variables
-training_depth = 1000  # how many images to train on
+training_depth = 300  # how many images to train on
 m2_size = 128
 learning_rate = 0.3
-epochs = 30
+epochs = 20
 batch_size = 64
 
 # Code
@@ -126,3 +126,6 @@ if __name__ == "__main__":
     plt.xlabel("Epoch")
     plt.ylabel("Cost")
     plt.show()
+
+np.save("weights_1.npy", weights_1)
+np.save("weights_2.npy", weights_2)
